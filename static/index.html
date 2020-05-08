@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="csript.css">
+    <title>Document</title>
+    <script>
+        function getvalue(){
+            var x=document.getElementById("text")
+            alert(x.innerHTML)
+        }
+    </script>
+</head>
+<body>
+    <p id="text" onclick="getvalue()"></p>
+    
+    <!--<script>
+        //json format
+        let students=[
+            {
+                "name":"ivy",
+                "age":25,
+                "height":160
+            },
+            {
+                "name":"abbay",
+                "age":24,
+                "height":168
+            }
+        ]
+        console.log(students)
+        //string->json   JSON.parse(string)
+        let s=`[
+            {
+                "name":"ivy",
+                "age":25,
+                "height":160
+            },
+            {
+                "name":"abbay",
+                "age":24,
+                "height":168
+            }
+        ]`
+        console.log(JSON.parse(s)[0].name)
+    </script>
+    </!-->
+    
+    <div class="container1">
+        <h2>Challenge 1: Your age in days</h2>
+    
+        <div class="container1_box">
+            <div>
+                <button class="btn btn-primary" onclick=ageindays()>Click me</button>
+            </div>
+            <div>
+                <button class="btn btn-danger" onclick=reset()>Reset</button>
+            </div>
+        </div>
+        <div class="container1_box">
+            <div id="box_result"></div>
+        </div>
+        
+        
+    </div>
+    <div class="container-2">
+        <h2>Challenge two</h2>
+        <button class="btn btn-success" id="cat-gen-btn" onclick=genratecat()>
+            Generate cat
+        </button>
+        <div class="flex-box-container-2" id="flex-cat-gen"></div>
+
+    </div>
+    <div class="container-3">
+        <h2>Challenge 3 rock, paper, scissors</h2>
+        
+        <div class="flext-box-rps" id="flex-box-res-div"> 
+            <img src="https://cdn.clipart.email/1cdbd02df35829f2c6cf3a6843d709de_friday-funny-10-5-18-igneous-cartoon-rock-clipart-1753206-_880-833.jpeg" id="rock" alt="rock" height=150 width=150 onclick=rockgame(this)>
+            <img src="https://i.ya-webdesign.com/images/cartoon-paper-png-1.png" id="paper" alt="paper" height=150 width=150 onclick=rockgame(this)>
+            <img src="https://previews.123rf.com/images/yupiramos/yupiramos1704/yupiramos170421528/76927581-scissor-cute-cartoon-icon-vector-illustration-graphic-design.jpg" id="scissors"alt="scissors" height=150 width=150 onclick=rockgame(this)>
+
+        </div>
+        
+    </div>
+    <div class="container-4">
+        <h2 id="change_my_color">Challenge 4 change the color of buttons</h2>
+        <div class="flex-box-pick-color">
+            <form action="">
+                <select name="backdrop" id="background" onchange="buttoncolorchange(this)">
+                    <option value="random">random</option>
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="reset">reset</option>
+                </select>
+            </form>
+            <button class="btn btn-primary">wee!</button>
+            <button class="btn btn-danger">yahoo</button>
+            <button class="btn btn-warning">google</button>
+            <button class="btn btn-success">facebook</button>
+        </div>
+    </div>
+    <div class="container-5">
+        <h2>Challenge 5 Blackjack</h2>
+        <h3><span id="game-result">let's play</span></h3>
+        <div class="flex-box-row1">
+            <div id="your-box">
+                <h2>You: <span id="your-score">0</span></h2>
+            </div>
+            <div id="rob-box"> 
+                <h2>Rob: <span id="rob-score">0</span></h2>
+            </div>
+        </div>
+        <div class="flex-box-row2">
+            <div >
+                <button class="btn-lg btn-primary mr-2" id="hit-btn">Hit</button>
+                <button class="btn-lg btn-warning mr-2" id="stand-btn">Stand</button>
+                <button class="btn-lg btn-danger " id="deal-btn">Deal</button>
+            </div>
+        </div>
+        <div class="flex-box-row3">
+            <table>
+                <tr>
+                    <th>Wins</th>
+                    <th>Loses</th>
+                    <th>Draws</th>
+                </tr>
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="loses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+            </table>
+        </div>
+        
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

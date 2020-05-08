@@ -1,0 +1,17 @@
+[
+    {
+        "name":"ivy",
+        "age":25,
+        "height":160
+    },
+    {
+        "name":"abbay",
+        "age":24,
+        "height":168
+    },
+    {
+        "name":"jack",
+        "age":26,
+        "height":170
+    }
+]
